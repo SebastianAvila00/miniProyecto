@@ -8,10 +8,9 @@ function Sidebar() {
     return (
         <div className="flex">
             <div className="w-[8vw] h-full bg-[#303030]">
-
             </div>
 
-            <div className="sesion h-[100px]">
+            <div className="sesion h-[100px] z-10">
                 <Link to="/login" className="flex justify-center items-center flex-col h-[120px] w-[59px] bg-green-500 rounded-tr-2xl border-r-2 border-t-2 border-black 
                 hover:bg-green-600 cursor-pointer">
 

@@ -1,20 +1,21 @@
 import React from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
+import { Link } from "react-router-dom"
 
 function LoginPage() {
     return (
         <div className="h-screen">
 
             <div>
-                {/* HEADER */}
+            
                 <Header />
 
                 <div>
-                    <div className="poke-header flex justify-center w-full h-[87px] bg-white">
-                        <div className="flex justify-center items-center bg-[#fff] w-[125px] h-[89px] border-b-4 border-[#919191] hover:bg-[#919191] hover:text-[#fff] cursor-pointer ">
+                    <div className="poke-header z-10 flex justify-center w-full h-[87px] bg-white">
+                        <Link to="/" className="flex justify-center items-center bg-[#fff] w-[125px] h-[89px] border-b-4 border-[#919191] hover:bg-[#919191] hover:text-[#fff] cursor-pointer ">
                             <p className="font-semibold">Inicio</p>
-                        </div>
+                        </Link>
 
                         <div className="flex justify-center items-center  bg-white w-[125px] h-[89px] border-b-4 border-red-500 hover:bg-red-500 hover:text-[#fff] cursor-pointer">
                             <p className="font-semibold"> Pokédex</p>
@@ -42,18 +43,25 @@ function LoginPage() {
                     </div>
 
 
-                    <div className="flex justify-between pt-[30px] bg-[#fff]">
-
+                    <div className="flex justify-between">
                         <Sidebar />
-                        <div>
 
 
-                            <p className="text-[1.6em] text-gray-400">¡TE DAMOS LA BIENVENIDA AL CLUB DE ENTRENADORES POKÉMON!</p>
+                        <div className="mt-[30px] bg-[#fff]">
 
-                         
+                            <div>
+
+                                <p className="text-[1.6em] text-gray-400">¡TE DAMOS LA BIENVENIDA AL CLUB DE ENTRENADORES POKÉMON!</p>
+
+
+
+
+                          
+
+                            </div>
+
 
                         </div>
-
                         <Sidebar />
                     </div>
 
@@ -62,6 +70,9 @@ function LoginPage() {
                 </div>
 
             </div>
+
+
+
 
         </div>
     )
