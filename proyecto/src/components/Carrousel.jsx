@@ -54,7 +54,7 @@ function Carrousel() {
 
                         <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
 
-                            <div className="border-solid border-2 border-black">
+                            <div className="border-solid border-2 w-[300px] border-black">
 
                                 <div className="card-top">
 
@@ -62,10 +62,14 @@ function Carrousel() {
                                 </div>
 
                                 <div className="bg-black text-white">
-                                    <p>{pokemon.title}</p>
-                                    <p>{pokemon.pokedex}</p>
-                                    <p>{pokemon.Type}</p>
-                                    <p>{pokemon.habilidad}</p>
+
+                                    <div className="flex font-semibold items-center justify-between pt-2">
+                                        <p className="text-[#f1f1f1] pl-4 text-[1.6em]">{pokemon.title}</p>
+                                        <p className="text-[#f4f4f4] pr-4 text-[1.6em]">{pokemon.pokedex}</p>
+                                    </div>
+
+                                    <p className="pl-4 ">Tipo  <span className="font-semibold">{pokemon.Type}</span></p>
+                                    <p className="pl-4 pb-4 ">Habilidad <span className="font-semibold">{pokemon.ability}</span></p>
                                 </div>
                             </div>
                         </div>

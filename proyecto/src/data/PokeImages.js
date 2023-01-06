@@ -5,7 +5,7 @@ export const Images = [
         image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png',
         Type: 'Planta y Veneno',
         pokedex: '1',
-        habilidad:'Latigo Cepa'
+        ability: 'Espesura'
 
     },
     {
@@ -13,63 +13,72 @@ export const Images = [
         title: 'Ivysaur',
         image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png',
         Type: 'Planta y Veneno',
-        pokedex: '2'
+        pokedex: '2',
+        ability: 'Espesura'
     },
     {
         id: '3',
         title: 'Venusaur',
         image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png',
         Type: 'Planta y Veneno',
-        pokedex: '3'
+        pokedex: '3',
+        ability: 'Espesura'
     },
     {
         id: '4',
         title: 'Charmander',
         image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png',
         Type: 'Fuego',
-        pokedex: '4'
+        pokedex: '4',
+        ability: 'Mar llamas'
     },
     {
         id: '5',
         title: 'Charmeleon',
         image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/005.png',
         Type: 'Fuego',
-        pokedex: '5'
+        pokedex: '5',
+        ability: 'Mar llamas'
     },
     {
         id: '6',
         title: 'Charizard',
         image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png',
         Type: 'Fuego',
-        pokedex: '6'
+        pokedex: '6',
+        ability: 'Mar llamas'
     },
     {
         id: '7',
         title: 'Squirtle',
         image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png',
         Type: 'Agua',
-        pokedex: '7'
+        pokedex: '7',
+        ability: 'Torrente'
     },
     {
         id: '8',
         title: 'Wartotle',
         image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png',
         Type: 'Agua',
-        pokedex: '8'
+        pokedex: '8',
+        ability: 'Torrente'
     },
     {
         id: '9',
         title: 'Blastoise',
         image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/009.png',
         Type: 'Agua',
-        pokedex: '9'
+        pokedex: '9',
+        ability: 'Torrente'
     },
     {
         id: '10',
         title: 'Caterpie',
         image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/010.png',
         Type: 'Bicho',
-        pokedex: '10'
+        pokedex: '10',
+        ability: 'Polvo escudo'
     },
 
 ]

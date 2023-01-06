@@ -1,8 +1,12 @@
 import React from "react";
 import Carrousel from "../components/Carrousel";
+import { Link } from "react-router-dom";
+
 //IMPORTACION DE HEADER Y SIDEBAR
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Sidebar from "../components/Sidebar"
+import Pokeball from "../img/pokeball.png"
 
 
 function HomePage() {
@@ -15,13 +19,12 @@ function HomePage() {
 
                 <div>
                     <div className="poke-header z-10 flex justify-center w-full h-[87px] bg-white">
-                        <div className="flex justify-center items-center text-white bg-[#919191] w-[125px] h-[89px] border-b-4 border-[#919191] hover:bg-[#919191] hover:text-[#fff] cursor-pointer ">
-                            <p className="font-semibold">Inicio</p>
-                        </div>
-
-                        <div className="flex justify-center items-center  bg-white w-[125px] h-[89px] border-b-4 border-red-500 hover:bg-red-500 hover:text-[#fff] cursor-pointer">
+                        <Link to="/" className="flex justify-center items-center bg-[#919191] w-[125px] h-[89px] border-b-4 border-[#919191] hover:bg-[#919191] hover:text-[#fff] cursor-pointer ">
+                            <p className="font-semibold text-white">Inicio</p>
+                        </Link>
+                        <Link to="/pokedex" className="flex justify-center items-center  bg-white w-[125px] h-[89px] border-b-4 border-red-500 hover:bg-red-500 hover:text-[#fff] cursor-pointer">
                             <p className="font-semibold"> Pokédex</p>
-                        </div>
+                        </Link>
 
                         <div className="flex justify-center items-center  bg-white w-[125px] h-[89px] border-b-4 border-orange-500  hover:bg-orange-500 hover:text-[#fff] cursor-pointer">
                             <p className="font-semibold"> Aplicaciones</p>
@@ -118,32 +121,44 @@ function HomePage() {
                                             <img className="h-[150px] w-[100%]" src="https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/video-games/_tiles/pokemon-scarlet-violet/launch/scarlet-violet-34-latam.jpg" alt=""
                                             />
 
-                                            <p className="text-white font-semibold mb-4 pt-[10px] text-[1.4em] pl-[20px]">¡Comienza tu viaje por Paldea!</p>
+                                            <p className=" text-white font-semibold mb-4 pt-[10px] text-[1.4em] pl-[20px]">¡Comienza tu viaje por Paldea!</p>
 
                                         </div>
 
                                     </div>
                                 </div>
 
-                                <div className="flex justify-center items-center ml-[185px] mt-10 h-[50px] w-[250px] bg-black">
+                                <div className="flex justify-center items-center ml-[185px] mt-10 h-[50px] w-[250px] rounded-t-lg bg-[#232323]">
 
-                                    <img className="h-[40px] pr-2" src="https://scontent.faep9-1.fna.fbcdn.net/v/t1.6435-9/52952683_10157309059573013_571529829199904768_n.png?_nc_cat=109&ccb=1-7&_nc_sid=174925&_nc_ohc=EYLxUmQW_x8AX_uErKp&_nc_ht=scontent.faep9-1.fna&oh=00_AfDU_I2RU_LUT6AF1wWdXQk_ecBPAyAqWtBkNO70PvkV_Q&oe=63DD2A92" alt="" />
+                                    <img className="h-[40px] pr-2" src={Pokeball} alt="" />
 
-                                    <p className="text-white text-[17px]">Pokémon destacados</p>
+                                    <p className="text-[#919191] -semibold text-[20px]">Pokémon destacados</p>
 
                                 </div>
 
-                                <div className=" bg-[rgba(0,0,0,0.5)] w-[82vw]">
+                                <div className=" bg-[rgba(0,0,0,0.5)] w-[82vw] h-[60vh] flex items-center">
                                     <Carrousel />
                                 </div>
+
+
+
+
+                                <div className="mb-[100px] flex justify-center items-center ml-[700px] mt-5 h-[50px] w-[200px] rounded-md cursor-pointer bg-[#232323]">
+
+                                    <p className=" text-[#f1f1f1] font-semibold text-[17px]">Ver más Pokémon</p>
+
+                                </div>
                             </div>
+
 
 
                         </div>
 
                         <Sidebar />
 
+
                     </div>
+                    <Footer />
 
                 </div>
 

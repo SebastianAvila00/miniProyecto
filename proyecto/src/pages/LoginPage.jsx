@@ -2,13 +2,14 @@ import React from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import { Link } from "react-router-dom"
+import Footer from "../components/Footer";
 
 function LoginPage() {
     return (
         <div className="h-screen">
 
             <div>
-            
+
                 <Header />
 
                 <div>
@@ -17,9 +18,9 @@ function LoginPage() {
                             <p className="font-semibold">Inicio</p>
                         </Link>
 
-                        <div className="flex justify-center items-center  bg-white w-[125px] h-[89px] border-b-4 border-red-500 hover:bg-red-500 hover:text-[#fff] cursor-pointer">
+                        <Link to="/pokedex" className="flex justify-center items-center  bg-white w-[125px] h-[89px] border-b-4 border-red-500 hover:bg-red-500 hover:text-[#fff] cursor-pointer">
                             <p className="font-semibold"> Pokédex</p>
-                        </div>
+                        </Link>
 
                         <div className="flex justify-center items-center  bg-white w-[125px] h-[89px] border-b-4 border-orange-500  hover:bg-orange-500 hover:text-[#fff] cursor-pointer">
                             <p className="font-semibold"> Aplicaciones</p>
@@ -56,10 +57,10 @@ function LoginPage() {
 
 
 
-                          
+
 
                             </div>
-
+                            <Footer />
 
                         </div>
                         <Sidebar />
