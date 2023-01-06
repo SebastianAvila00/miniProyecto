@@ -13,7 +13,6 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 function Pokedex() {
 
-    let indexImg = 0;
 
     const [changePokemon, setChangePokemon] = useState();
 
@@ -100,16 +99,16 @@ function Pokedex() {
                                     <p className="text-white font-semibold">¡Usa la búsqueda avanzada para encontrar Pokémon por su <br /> tipo, debilidad,habilidad y demas datos!</p>
                                 </div>
 
-                                <div className="ml-[50px] h-[100px] w-[400px] rounded-lg bg-[#4dad5b] flex items-center">
-                                    <p className=" p-5 text-white text-[1.1em] font-semibold">Busca un Pokémon por su nombre o usando su número de la Pokédez Nacional.</p>
+                                <div className="ml-[50px] h-[90px] w-[400px] rounded-lg bg-[#4dad5b] flex items-center">
+                                    <p className=" p-5 text-white text-[18px] font-semibold">Busca un Pokémon por su nombre o <br /> usando su número de la Pokédez Nacional.</p>
                                 </div>
                             </div>
 
 
 
 
-                            <div className="flex justify-evenly">
-                                <div className="bg-[#30a7d7] rounded-md h-[40px] w-[300px] flex items-center justify-center cursor-pointer hover:bg-[#178bb8]">
+                            <div className="flex justify-evenly mt-[30px]">
+                                <div className="bg-[#30a7d7] rounded-md h-[45px] w-[330px] flex items-center justify-center cursor-pointer hover:bg-[#178bb8]">
 
                                     <p className="text-[white] font-semibold">¡Sorprendeme!</p>
                                 </div>
