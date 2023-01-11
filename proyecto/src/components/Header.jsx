@@ -4,7 +4,8 @@ import "../App.css"
 function Header() {
     return (
         <div className="h-full">
-            <div className="flex justify-center w-full h-[62px] bg-[#f1f1f1] border-b-2 border-gray-300">
+            <div className="flex md:w-full md:h-[62px] md:justify-center bg-[#f1f1f1]"
+            >
 
                 <div className="poke-shadow h-[62px] w-[120px] flex justify-center bg-white mr-2">
                     <img className="h-[60px] cursor-pointer" src="https://assets.pokemon.com/assets/cms2-es-xl/img/misc/gus/buttons/logo-pokemon-79x45.png" alt="Pokemon" />

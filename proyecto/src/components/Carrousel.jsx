@@ -54,23 +54,38 @@ function Carrousel() {
 
                         <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
 
-                            <div className="border-solid border-2 w-[300px] border-black">
+                            <div className=" md:border-solid md:border-2 md:w-[300px] border-black">
 
-                                <div className="card-top">
+                                <div className="h-[150px] md:h-[300px] flex justify-center items-center ">
 
-                                    <img src={pokemon.image} alt="" />
+                                    <img className="h-[150px] w-[50px] md:h-[200px] md:w-[250px]" src={pokemon.image} alt="" />
                                 </div>
 
-                                <div className="bg-black text-white">
+                                <div className="w-[150px] md:h-[120px] bg-black md:w-full text-white">
 
                                     <div className="flex font-semibold items-center justify-between pt-2">
-                                        <p className="text-[#f1f1f1] pl-4 text-[1.6em]">{pokemon.title}</p>
-                                        <p className="text-[#f4f4f4] pr-4 text-[1.6em]">{pokemon.pokedex}</p>
+                                        <p className="text-[#f1f1f1] pl-4 
+                                        md:text-[1.6em]">{pokemon.title}</p>
+                                        <p className="text-[#f4f4f4]text-[12px]  pr-4 md:text-[1.6em]">{pokemon.pokedex}</p>
                                     </div>
 
-                                    <p className="pl-4 ">Tipo  <span className="font-semibold">{pokemon.Type}</span></p>
-                                    <p className="pl-4 pb-4 ">Habilidad <span className="font-semibold">{pokemon.ability}</span></p>
+                                    <p className="pl-4 text-[12px]  md:text-[1em]">Tipo
+                                        <span className="pl-4  font-semibold  md:text-[1em] text-[12px]">
+                                            {pokemon.Type}
+                                        </span>
+                                    </p>
+
+
+                                    <p className="text-[12px]  md:text-[1em] pl-4 pb-4 ">
+                                        Habilidad
+                                        
+                                        <span className=" pl-4  md:text-[1em] font-semibold">
+                                            {pokemon.ability}
+                                        </span>
+                                    </p>
                                 </div>
+
+
                             </div>
                         </div>
                     )
