@@ -3,10 +3,24 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import { Link } from "react-router-dom"
 import Footer from "../components/Footer";
-import Formulario from "../components/Form";
+// import Formulario from "../components/Form";
 import { Formik } from "formik";
 
+
+import { useAuth } from "../context/authContext";
+import { useNavigate } from "react-router-dom";
+
+
+
 function LoginPage() {
+
+
+    const { login } = useAuth()
+    const navigate = useNavigate();
+
+
+
+
     return (
         <div className="h-screen">
 
@@ -86,12 +100,12 @@ function LoginPage() {
                                                         errores.name = 'El nombre solo puede contener letras y espacios.'
 
                                                     }
-                                                  
+
 
                                                     if (!valores.password) {
                                                         errores.password = 'Escribe una Contraseña.'
-                                                    } 
-                                        
+                                                    }
+
                                                     return errores;
 
 
@@ -100,10 +114,9 @@ function LoginPage() {
                                                     console.log(valores);
                                                     console.log("Enviar");
                                                 }}
+                                                
                                             >
                                                 {({ handleSubmit, values, errors, handleChange, handleBlur }) => (
-
-
 
                                                     <form
                                                         action=""
@@ -131,7 +144,7 @@ function LoginPage() {
                                                                         onChange={handleChange}
                                                                         onBlur={handleBlur}
                                                                     />
-                                                                    <a className='text-[#1b53ba] hover:text-[#77a6fe]' href="#" rel="noopener noreferrer">¿Has olvidado tu nombre de <br className='hidden md:block' /> usuario?</a>
+                                                                    <a className='text-[#1b53ba] hover:text-[#77a6fe] underline' href="#" rel="noopener noreferrer">¿Has olvidado tu nombre de <br className='hidden md:block' /> usuario?</a>
 
                                                                 </div>
                                                             </div>
@@ -154,7 +167,7 @@ function LoginPage() {
                                                                         onChange={handleChange}
                                                                         onBlur={handleBlur}
                                                                     />
-                                                                    <a className='text-[#1b53ba] hover:text-[#77a6fe]' href="#" rel="noopener noreferrer">¿Has olvidado tu contraseña?</a>
+                                                                    <a className='text-[#1b53ba] hover:text-[#77a6fe] underline' href="#" rel="noopener noreferrer">¿Has olvidado tu contraseña?</a>
 
                                                                 </div>
                                                             </div>

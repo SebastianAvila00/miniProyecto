@@ -1,6 +1,7 @@
 import React from "react";
 import Carrousel from "../components/Carrousel";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/authContext";
 
 //IMPORTACION DE HEADER Y SIDEBAR
 import Header from "../components/Header";
@@ -12,8 +13,22 @@ import ButtonLogin from "../components/ButtonLogin";
 
 
 function HomePage() {
+
+    const { user, logout, loading } = useAuth()
+
+    console.log(user)
+    const handleLogout = async () => {
+        await logout()
+    }
+
+    if (loading) return <div>Cargando...</div>
+
     return (
         <div className="h-screen">
+
+            {/* <div>{user.email} {user.uid}</div> */}
+
+            <button onClick={handleLogout}>Logout</button>
 
             <div>
                 {/* HEADER */}
