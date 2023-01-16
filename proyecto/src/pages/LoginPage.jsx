@@ -1,23 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
+
+//IMPORTACION DE COMPONENTES
+import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import { Link } from "react-router-dom"
 import Footer from "../components/Footer";
-// import Formulario from "../components/Form";
 import { Formik } from "formik";
 
 
-import { useAuth } from "../context/authContext";
-import { useNavigate } from "react-router-dom";
 
+// import { useAuth } from "../context/authContext";
+// import { useNavigate } from "react-router-dom";
 
 
 function LoginPage() {
 
+    // const [user, setUser] = useState({
+    //     email: '',
+    //     password: ''
+    // });
 
-    const { login } = useAuth()
-    const navigate = useNavigate();
+    // const { login } = useAuth()
+    // const navigate = useNavigate();
 
+    // const handleChange = ({ target: { name, value } }) => {
+    //     setUser({ ...user, [name]: value })
+    // }
+
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault()
+
+    //     try {
+    //         await login(user.email, user.password)
+    //         navigate("/")
+    //     } catch (error) {
+    //         console.log(error);
+
+    //     }
+
+
+    // }
 
 
 
@@ -29,42 +52,14 @@ function LoginPage() {
                 <Header />
 
                 <div>
-                    <div className="md:sticky md:top-0 md:z-50 md:flex md:justify-center md:w-full bg-white">
-                        <Link to="/" className="h-[70px]
-                        flex justify-center items-center bg-[#fff] md:w-[125px] md:h-[89px] border-b-4 border-[#919191] text-[#464646] hover:bg-[#919191] hover:text-[#fff] cursor-pointer ">
-                            <p className="text-[15px] font-semibold ">Inicio</p>
-                        </Link>
 
-                        <Link to="/pokedex" className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-red-500 hover:bg-red-500 text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold"> Pokédex</p>
-                        </Link>
 
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-orange-500  hover:bg-orange-500 text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold "> Aplicaciones</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-yellow-500 hover:bg-yellow-500 text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold ">Juegos de Cartas Coleccionables</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-green-500 hover:bg-green-500 text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold "> TV Pokémon</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-[#5dbef3] hover:bg-[#5dbef3] text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold "> Play! Pokémon</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-[#3d56f5] hover:bg-[#3d56f5] text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold "> Noticias</p>
-                        </div>
-                    </div>
+                    <NavBar
+                        TextColorInicio={"text-[#8e8d8d]"}
+                        ColorInicio={"bg-[#fff]"}
+                        ColorPokedex={"bg-[#fff]"}
+                        TextColorPokedex={"text-[#8e8d8d]"}
+                    />
 
 
                     <div className=" xl:flex xl:justify-between">
@@ -76,23 +71,25 @@ function LoginPage() {
                             <div className="flex flex-col">
 
 
-
                                 <p className="text-[1.6em] text-gray-400">¡TE DAMOS LA BIENVENIDA AL CLUB DE ENTRENADORES POKÉMON!</p>
 
-
                                 <div className="mt-[50px] flex flex-col md:flex-row md:justify-center">
+
+                                    {/* BLOQUE DE LOGEO */}
 
                                     <div>
                                         <p className="text-center md:text-[1.6em] text-[#919191]">Iniciar sesión</p>
                                         <div>
                                             <Formik
                                                 initialValues={{
-                                                    name: '',
+                                                    email: '',
                                                     password: ''
 
                                                 }}
                                                 validate={(valores) => {
                                                     let errores = {};
+
+                                                    // MENSAJES DE ERRORES CON FORMIK
 
                                                     if (!valores.name) {
                                                         errores.name = 'Escribe un nombre de usuario.'
@@ -114,20 +111,21 @@ function LoginPage() {
                                                     console.log(valores);
                                                     console.log("Enviar");
                                                 }}
-                                                
                                             >
                                                 {({ handleSubmit, values, errors, handleChange, handleBlur }) => (
 
                                                     <form
                                                         action=""
                                                         onSubmit={handleSubmit}
-                                                        className="h-[400px] md:w-[400px] bg-[#F2F2F2]"
+                                                        className="rounded-md h-[400px] md:w-[400px] bg-[#F2F2F2]"
                                                     >
 
                                                         {errors.name && <div className="border-solid rounded-lg border-2 border-red-600 text-red-500 text-center ">{errors.name}</div>}
                                                         {errors.password && <div className="mt-5 rounded-lg border-red-600 border-solid border-2  text-red-500 text-center">{errors.password}</div>}
 
                                                         <div className='pt-5'>
+
+                                                            {/* NOMBRE DE USUARIO */}
 
                                                             <div className='flex flex-col justify-center md:justify-around items-center lg:flex-row lg:items-start'>
 
@@ -150,7 +148,7 @@ function LoginPage() {
                                                             </div>
 
 
-
+                                                            {/* CONTRASEÑA */}
 
                                                             <div className='flex flex-col justify-center md:justify-around items-center lg:items-start lg:flex-row'>
 
@@ -184,12 +182,16 @@ function LoginPage() {
                                     </div>
 
 
-                                    <div className="ml-5">
+
+                                    {/* BLOQUE DE REGISTRO */}
+
+
+                                    <div className=" md:ml-5">
                                         <p className="text-[1.6em]  text-[#919191]">¡Únete al Club de Entrenadores <br /> Pokémon!</p>
 
-                                        <div className=" md:h-[230px] md:w-[350px] bg-[#F2F2F2]">
+                                        <div className="lg:w-[450px] lg:h-[250px] rounded-md md:h-[230px] md:w-[350px] bg-[#F2F2F2]">
 
-                                            <p className="">¡Crea una cuenta del Club de Entrenadores Pokémon hoy mismo! Con ella podrás encargarte de tu perfil en Pokemon.com/LATAM, jugar al Juego de Cartas Coleccionables Online... ¡<span className="text-[#1b53ba] cursor-pointer hover:text-[#092355]">y mucho más</span>!</p>
+                                            <p className="lg:pt-3 lg:pl-5">¡Crea una cuenta del Club de Entrenadores Pokémon <br className="hidden lg:block" /> hoy mismo! Con ella podrás encargarte de tu perfil en Pokemon.com/LATAM, jugar al Juego de Cartas Coleccionables Online... ¡<span className="text-[#1b53ba] cursor-pointer hover:text-[#092355]">y mucho más</span>!</p>
 
 
                                             <div className='flex justify-center lg:justify-end lg:pr-5'>

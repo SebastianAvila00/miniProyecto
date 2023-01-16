@@ -1,85 +1,40 @@
 import React from "react";
-import Carrousel from "../components/Carrousel";
 import { Link } from "react-router-dom";
-import { useAuth } from "../context/authContext";
 
-//IMPORTACION DE HEADER Y SIDEBAR
+//IMPORTACION DE COMPONENTES
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Sidebar from "../components/Sidebar"
 import Pokeball from "../img/pokeball.png"
-
+import Carrousel from "../components/Carrousel";
 import ButtonLogin from "../components/ButtonLogin";
+import NavBar from "../components/NavBar";
 
 
 function HomePage() {
 
-    const { user, logout, loading } = useAuth()
-
-    console.log(user)
-    const handleLogout = async () => {
-        await logout()
-    }
-
-    if (loading) return <div>Cargando...</div>
-
     return (
         <div className="h-screen">
-
-            {/* <div>{user.email} {user.uid}</div> */}
-
-            <button onClick={handleLogout}>Logout</button>
-
             <div>
                 {/* HEADER */}
                 <Header />
 
                 <div>
-                    <div className="md:sticky md:top-0 md:z-50 md:flex md:justify-center md:w-full bg-white">
-                        <Link to="/" className="h-[70px]
-                        flex justify-center items-center bg-[#919191] md:w-[125px] md:h-[89px] border-b-4 border-[#919191] hover:bg-[#919191] hover:text-[#fff] cursor-pointer ">
-                            <p className="text-[15px] font-semibold text-white">Inicio</p>
-                        </Link>
 
-                        <Link to="/pokedex" className="h-[70px] text-[#464646]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-red-500 hover:bg-red-500 hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold "> Pokédex</p>
-                        </Link>
-
-                        <div className="h-[70px] text-[#464646]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-orange-500  hover:bg-orange-500 hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold"> Aplicaciones</p>
-                        </div>
-
-                        <div className="h-[70px] text-[#464646]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-yellow-500 hover:bg-yellow-500 hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold">Juegos de Cartas Coleccionables</p>
-                        </div>
-
-                        <div className="h-[70px] text-[#464646]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-green-500 hover:bg-green-500 hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold"> TV Pokémon</p>
-                        </div>
-
-                        <div className="h-[70px] text-[#464646]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-[#5dbef3] hover:bg-[#5dbef3] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold"> Play! Pokémon</p>
-                        </div>
-
-                        <div className="h-[70px] text-[#464646]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-[#3d56f5] hover:bg-[#3d56f5] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold"> Noticias</p>
-                        </div>
-                    </div>
-
+                    <NavBar
+                        TextColorInicio={"text-[#fff]"}
+                        ColorInicio={"bg-[#919191]"}
+                        ColorPokedex={"bg-white"}
+                        TextColorPokedex={"text-[#8e8d8d]"}
+                    />
 
                     <div className=" xl:flex xl:justify-between">
                         <Sidebar />
                         <ButtonLogin />
 
-
-
                         <div className="mt-[30px] bg-[#f1f1f1]">
+
+                            {/* BLOQUES DE FOTOS CON INFORMACION EN HOMEPAGE */}
 
                             <div>
                                 <div className="lg:flex lg:justify-center">
@@ -173,6 +128,8 @@ function HomePage() {
 
                                 </div>
 
+                                {/* CARRUSEL */}
+                                
                                 <div className="md:h-[420px] h-[220px] bg-[rgba(0,0,0,0.5)] xl:w-[82vw]"
                                 >
                                     <Carrousel />

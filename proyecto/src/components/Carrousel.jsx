@@ -1,16 +1,23 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+
+// IMPORTACION DE CSS
 import '../components/Carrousel.css'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
+// IMPORTACION DE ICONOS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons"
 
+// IMPORTACION DE REACT-SLICK PARA EL CARRUSEL
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
+// IMPORTACION DE DATOS DEL JSON
 import { Images } from "../data/PokeImages";
 
 function Carrousel() {
+
+    // BOTONES SIGUIENTE Y ANTERIOR DE CARRUSEL
 
     const NextArrow = ({ onClick }) => {
         return (
@@ -30,6 +37,7 @@ function Carrousel() {
 
     const [imageIndex, setimageIndex] = useState(0);
 
+    // AJUSTES DEL CARRUSEL
     const settings = {
         infinity: true,
         lazyLoad: true,
@@ -54,14 +62,19 @@ function Carrousel() {
 
                         <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
 
-                            <div className=" md:border-solid md:border-2 md:w-[300px] border-black">
+                            <div className=" md:w-[300px] ">
 
-                                <div className="h-[150px] md:h-[300px] flex justify-center items-center ">
+                                <div className="md:border-2 border-black h-[150px] w-[150px] md:w-[300px] md:h-[250px] flex justify-center items-center ">
+                                    <div>
 
-                                    <img className="h-[150px] w-[50px] md:h-[200px] md:w-[250px]" src={pokemon.image} alt="" />
+
+                                        <p className="hidden md:block text-[#5c5c5c] pb-10 md:text-[8em] z-10 font-bold">N°{pokemon.pokedex}</p>
+
+                                        <img className="md:left-[75px] md:top-11 lg:left-[35px] left-[20px] top-[0px] absolute z-40 h-[150px] w-[50px] md:h-[200px] md:w-[250px]" src={pokemon.image} alt="" />
+                                    </div>
                                 </div>
 
-                                <div className="w-[150px] md:h-[120px] bg-black md:w-full text-white">
+                                <div className="w-[150px] md:h-[150px] bg-[#232323] md:w-full text-white">
 
                                     <div className="flex font-semibold items-center justify-between pt-2">
                                         <p className="text-[#f1f1f1] pl-4 
@@ -78,7 +91,7 @@ function Carrousel() {
 
                                     <p className="text-[12px]  md:text-[1em] pl-4 pb-4 ">
                                         Habilidad
-                                        
+
                                         <span className=" pl-4  md:text-[1em] font-semibold">
                                             {pokemon.ability}
                                         </span>

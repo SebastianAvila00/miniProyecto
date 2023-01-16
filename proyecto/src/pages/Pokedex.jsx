@@ -1,24 +1,21 @@
-
 import React, { useState, useEffect } from "react"
+import NavBar from "../components/NavBar"
 
 //IMPORTACIONES DE COMPONENTES
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
+import ButtonLogin from "../components/ButtonLogin";
+
 //IMPORTACIONES DE AXIOS
 import axios from "axios";
 
-//IMPORTACIONES DE NAVEGADOR
-import { Link } from "react-router-dom";
-
-//IMPORTACIONES DE ICONOS
+//IMPORTACIONES DE ICONOS E IMAGENES
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faArrowsRotate } from "@fortawesome/free-solid-svg-icons";
-
 import Pokeball from "../img/pokeball.png"
-import Reload from "../img/reload.png"
-import ButtonLogin from "../components/ButtonLogin";
+
 
 
 
@@ -61,6 +58,15 @@ function Pokedex() {
     }
 
 
+    // const PokeRandom = (min, max) => {
+    //     return Math.floor((Math.random() * (max - min + 1)))
+    // }
+    // for (let x = 0; x < 100; x++) {
+    //     console.log(PokeRandom(0,12));
+    // }
+
+    // console.log(PokeRandom);
+
     return (
         <div className="h-screen">
 
@@ -69,44 +75,12 @@ function Pokedex() {
                 <Header />
 
                 <div>
-                    <div className="md:sticky md:top-0 md:z-50  md:flex md:justify-center md:w-full bg-white">
-                        <Link to="/" className="h-[70px] text-[#464646]
-                        flex justify-center items-center bg-[#fff] md:w-[125px] md:h-[89px] border-b-4 border-[#919191] hover:bg-[#919191] hover:text-[#fff] cursor-pointer ">
-                            <p className="text-[15px] font-semibold ">Inicio</p>
-                        </Link>
-
-                        <Link to="/pokedex" className="h-[70px] 
-                    flex justify-center items-center  bg-red-500 md:w-[125px] md:h-[89px] border-b-4 border-red-500 hover:bg-red-500 hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold text-white"> Pokédex</p>
-                        </Link>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-orange-500  hover:bg-orange-500 hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold"> Aplicaciones</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-yellow-500 hover:bg-yellow-500 hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold">Juegos de Cartas Coleccionables</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-green-500 hover:bg-green-500 hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold"> TV Pokémon</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-[#5dbef3] hover:bg-[#5dbef3] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold"> Play! Pokémon</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-[#3d56f5] hover:bg-[#3d56f5] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold"> Noticias</p>
-                        </div>
-                    </div>
-
-
+                    <NavBar
+                        TextColorInicio={"text-[#8e8d8d]"}
+                        ColorInicio={"bg-[#fff]"}
+                        ColorPokedex={"bg-[#E3350D]"}
+                        TextColorPokedex={"text-white"}
+                    />
 
 
                     <div className=" xl:flex xl:justify-between">
@@ -121,6 +95,8 @@ function Pokedex() {
 
                             <div className="bg-[#313131] md:h-[200px] md:flex md:items-center xl:w-[84vw]">
 
+
+                                {/* BUSCADOR */}
                                 <div className="mb-[20px] md:mb-[0px] ml-[30px] md:ml-[100px] xl:ml-[200px]">
                                     <p className="text-[#f1f1f1] text-[2em]">Nombre o número</p>
 
@@ -189,6 +165,8 @@ function Pokedex() {
 
                                         {!results ? "cargando..." : results.map((pokemon, index) => {
                                             return (
+
+                                                // PARA MATCHEAR LA IMG CON EL NOMBRE DEL INPUT LE SUMO UN +1 AL URL DE LAS IMAGENES PARA QUE MIENTRAS TRAIGA LOS ID TAMBIEN TRAIGA LA IMAGEN DEL RESPECTIVO NUMERO
 
                                                 <tr className="h-[300px] w-[250px] m-5">
                                                     <div className="flex flex-col">

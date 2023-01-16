@@ -3,15 +3,20 @@ import { Route, Routes } from 'react-router-dom';
 
 //IMPORTACION DE RUTAS
 import HomePage from './pages/HomePage';
+import Pokedex from './pages/Pokedex';
+
+//LOGIN Y REGISTRO CON FORMIK
 import LoginPage from './pages/LoginPage';
 import RegisterPage1 from './pages/Register1Page';
 import RegisterPage2 from './pages/Register2Page';
 import RegisterPage3 from './pages/Register3Page';
-import Pokedex from './pages/Pokedex';
-import Prueba from './components/Prueba';
+
+//LOGIN Y REGISTRO CON FIREBASE
+import BisLoginPage from './pages/BisLogin';
+import BisRegisterPage2 from "./pages/BisRegister2"
+
 import { AuthProvider } from './context/authContext';
 import { ProtectedRoute } from './components/ProtectRoute';
-
 
 
 function App() {
@@ -27,17 +32,22 @@ function App() {
           <ProtectedRoute>
             <Pokedex />
           </ProtectedRoute>
-        }/>
+        } />
+
         <Route path='/login' element={<LoginPage />} />
+        <Route path='/loginBis' element={<BisLoginPage />} />
 
         <Route path='/register1' element={<RegisterPage1 />} />
 
         <Route path='/register2' element={<RegisterPage2 />} />
+        <Route path='/register2Bis' element={<BisRegisterPage2 />} />
 
-        <Route path='/register3' element={<RegisterPage3 />} />
+        <Route path='/register3' element={
 
-        <Route path='/register4' element={<Prueba />} />
-
+          <ProtectedRoute>
+            <RegisterPage3 />
+          </ProtectedRoute>
+        } />
 
       </Routes>
     </AuthProvider>

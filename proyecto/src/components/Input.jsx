@@ -11,6 +11,7 @@ function Input({ type, name, value, onChange, onBlur }) {
             value={value}
             onChange={onChange}
             onBlur={onBlur}
+            required
         />
     )
 }

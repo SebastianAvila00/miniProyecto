@@ -1,9 +1,12 @@
 import React from "react";
 
+// IMPORTACION DE IMAGENES
 import Facebook from "../img/face.png"
 import Youtube from "../img/youtube.png"
 import Twitter from "../img/twitter.png"
 import Publi from "../img/publi.png"
+
+
 
 function Footer() {
     return (

@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Formik } from 'formik';
-import Input from './Input';
 
 const Formulario = ({errors}) => {
-
-
-
 	return (
 		<>
-
-
 			<Formik
 				initialValues={{
 					name: '',

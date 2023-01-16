@@ -6,7 +6,6 @@ function Header() {
         <div className="h-full">
             <div className="flex md:w-full md:h-[62px] md:justify-center bg-[#f1f1f1]"
             >
-
                 <div className="poke-shadow h-[62px] w-[120px] flex justify-center bg-white mr-2">
                     <img className="h-[60px] cursor-pointer" src="https://assets.pokemon.com/assets/cms2-es-xl/img/misc/gus/buttons/logo-pokemon-79x45.png" alt="Pokemon" />
                 </div>

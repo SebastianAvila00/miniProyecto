@@ -7,8 +7,6 @@ function Sidebar() {
         <div className="flex">
             <div className="w-[8vw] h-full bg-[#303030]">
             </div>
-
-            
         </div>
     );
 }
