@@ -129,7 +129,6 @@ function BisRegisterPage2() {
 
                                                         <Input
                                                             type="text"
-                                                            placeholder="hola"
                                                             name="name"
                                                       />
 
@@ -159,8 +158,7 @@ function BisRegisterPage2() {
                                                             className="h-[40px] w-[290px] rounded md:mr-5 bg-[#313131] text-white "
 
                                                             onChange={handleChange}
-                                                            type="password"
-                                                            placeholder="ingrese un Contraseña"
+                                                            type="password"                                                       
                                                             name="password"
                                                             id="password"
                                                         />
@@ -191,8 +189,7 @@ function BisRegisterPage2() {
                                                         <input
                                                             className="h-[40px] w-[290px] rounded md:mr-5 bg-[#313131] text-white "
                                                             onChange={handleChange}
-                                                            type="email"
-                                                            placeholder="ingrese un Email"
+                                                            type="email"                                             
                                                             name="email"
                                                             id="email"
                                                         />

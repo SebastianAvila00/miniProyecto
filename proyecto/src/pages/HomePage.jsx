@@ -130,7 +130,7 @@ function HomePage() {
 
                                 {/* CARRUSEL */}
                                 
-                                <div className="md:h-[420px] h-[220px] bg-[rgba(0,0,0,0.5)] xl:w-[82vw]"
+                                <div className="md:h-[420px] h-[330px] bg-[rgba(0,0,0,0.5)] xl:w-[82vw] "
                                 >
                                     <Carrousel />
                                 </div>

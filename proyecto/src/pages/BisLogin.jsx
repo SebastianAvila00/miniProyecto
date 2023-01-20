@@ -128,7 +128,6 @@ function BisLoginPage() {
                                                                 className='lg:mt-3 w-[250px] bg-[#313131] text-[#f1f1f1]  rounded-md md:h-[40px] md:w-[237px]'
                                                                 onChange={handleChange}
                                                                 type="email"
-                                                                placeholder="ingrese un Email"
                                                                 name="email"
                                                                 id="email"
                                                             />
@@ -150,7 +149,6 @@ function BisLoginPage() {
                                                                 className='lg:mt-3 w-[250px] bg-[#313131] text-[#f1f1f1]  rounded-md md:h-[40px] md:w-[237px]'
                                                                 onChange={handleChange}
                                                                 type="password"
-                                                                placeholder="ingrese un Contraseña"
                                                                 name="password"
                                                                 id="password"
                                                             />
@@ -168,12 +166,14 @@ function BisLoginPage() {
                                     </div>
 
 
-                                    <div className="ml-5">
+                                    
+
+                                    <div className=" md:ml-5">
                                         <p className="text-[1.6em]  text-[#919191]">¡Únete al Club de Entrenadores <br /> Pokémon!</p>
 
-                                        <div className=" md:h-[230px] md:w-[350px] bg-[#F2F2F2]">
+                                        <div className="lg:w-[450px] lg:h-[250px] rounded-md md:h-[230px] md:w-[350px] bg-[#F2F2F2]">
 
-                                            <p className="">¡Crea una cuenta del Club de Entrenadores Pokémon hoy mismo! Con ella podrás encargarte de tu perfil en Pokemon.com/LATAM, jugar al Juego de Cartas Coleccionables Online... ¡<span className="text-[#1b53ba] cursor-pointer hover:text-[#092355]">y mucho más</span>!</p>
+                                            <p className="lg:pt-3 lg:pl-5">¡Crea una cuenta del Club de Entrenadores Pokémon <br className="hidden lg:block" /> hoy mismo! Con ella podrás encargarte de tu perfil en Pokemon.com/LATAM, jugar al Juego de Cartas Coleccionables Online... ¡<span className="text-[#1b53ba] cursor-pointer hover:text-[#092355]">y mucho más</span>!</p>
 
 
                                             <div className='flex justify-center lg:justify-end lg:pr-5'>

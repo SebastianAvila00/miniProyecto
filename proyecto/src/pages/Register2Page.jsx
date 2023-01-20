@@ -256,7 +256,7 @@ function RegisterPage2() {
                                                             <p className="text-center text-[#616161]">Lee las condiciones de uso y haz clic en "Continuar" para aceptarlas.
                                                             </p>
 
-                                                            <div className=" md:w-[550px] rounded-md w-[300px] h-[350px] bg-[#616161] scrollbar scrollbar-thumb-white">
+                                                            <div className="md:w-[550px] rounded-md w-[300px] h-[350px] bg-[#616161] overflow-y-scroll">
 
                                                                 <div className="pl-5  w-[100%]">
                                                                     <span className="text-white flex mb-5"> Términos de uso</span>

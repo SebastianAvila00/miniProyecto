@@ -8,8 +8,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { MuiPickersUtilsProvider } from "@material-ui/pickers"
 import DateFnsUtils from "@date-io/date-fns"
 import esLocale from "date-fns/locale/es"
-//FIREBASE
-import { FirebaseAppProvider } from "reactfire"
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

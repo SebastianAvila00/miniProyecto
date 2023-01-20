@@ -69,6 +69,7 @@
     .activeSlide {
         transform: scale(0.8);
         opacity: 1;
+        
     }
 }
 

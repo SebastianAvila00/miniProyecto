@@ -29,6 +29,7 @@ function App() {
 
         <Route path='/pokedex' element={
 
+          // RUTA PRIVADA
           <ProtectedRoute>
             <Pokedex />
           </ProtectedRoute>
@@ -44,6 +45,7 @@ function App() {
 
         <Route path='/register3' element={
 
+          // RUTA PRIVADA
           <ProtectedRoute>
             <RegisterPage3 />
           </ProtectedRoute>

@@ -26,9 +26,9 @@ function Pokedex() {
 
     //LLAMADO A POKEAPI
     const peticionGet = async () => {
-        await axios.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=12")
+        await axios.get("https://pokeapi.co/api/v2/pokemon/")
             .then(response => {
-                setChangePokemon(response.data.results);
+                setChangePokemon(response.data.results.slice(0, 12));
                 console.log(response.data.results);
             }).catch(error => {
                 console.log(error);
@@ -62,7 +62,7 @@ function Pokedex() {
     //     return Math.floor((Math.random() * (max - min + 1)))
     // }
     // for (let x = 0; x < 100; x++) {
-    //     console.log(PokeRandom(0,12));
+    //     console.log(PokeRandom(0, 12));
     // }
 
     // console.log(PokeRandom);
@@ -88,21 +88,61 @@ function Pokedex() {
                         <ButtonLogin />
 
 
-                        <div className="mt-[30px] ">
+                        <div className="mt-[25px] ">
 
-                            <p className="ml-[30px] text-[#919191] text-[1.6em] font-semibold md:ml-[100px] lg:ml-[200px]">Pokédex</p>
-
-
-                            <div className="bg-[#313131] md:h-[200px] md:flex md:items-center xl:w-[84vw]">
+                            <p className="ml-[30px] lg:mb-5 text-[#919191] text-[1.9em] md:ml-[100px] lg:ml-[200px]">Pokédex</p>
 
 
-                                {/* BUSCADOR */}
-                                <div className="mb-[20px] md:mb-[0px] ml-[30px] md:ml-[100px] xl:ml-[200px]">
+                            <div className=" lg:h-[194px] lg:flex-row md:h-[300px] md:w-full flex flex-col justify-center items-center bg-[#313131] md:flex lg:justify-center md:items-center xl:w-[84vw]">
+
+                                <div className="md:w-full lg:w-[400px]">
+                                    <p className="lg:text-left text-center mt-2 text-[#f1f1f1] mb-3 text-[27px]">Nombre o número</p>
+
+                                    <div className="md:items-center md:justify-center flex lg:flex">
+
+                                        <input
+                                            className="rounded-sm w-[250px] md:w-[312px] h-[40px]"
+                                            type="text"
+                                            value={search}
+                                            onChange={Searcher}
+                                        />
+
+                                        <div className=" md:ml-[20px] flex justify-center items-center md:h-[50px] w-[55px]  rounded-md cursor-pointer hover:bg-[#d15922] bg-[#ee6b2f]">
+
+                                            <FontAwesomeIcon className=" text-[20px] text-white" icon={faMagnifyingGlass} />
+                                        </div>
+
+                                    </div>
+
+                                    <p className="lg:text-left m-auto md:text-center md:w-[400px] lg:w-[450px] text-[12px] md:text-[16px] text-white font-semibold">¡Usa la búsqueda avanzada para encontrar  Pokémon por su tipo, debilidad,habilidad y demas datos!</p>
+
+                                </div>
+
+                                <div>
+
+                                    <div className="lg:ml-10 w-full md:w-screen md:mt-5 mb-3 mt-3 h-[90px] lg:w-[430px] lg:mb-[54px] rounded-md bg-[#4dad5b] flex items-center">
+
+                                        <p className="lg:font-medium lg:text-left md:text-center md:text-[25px] text-[15px] p-3 md:p-5 text-white lg:text-[20px] ">Busca un Pokémon por su nombre o <br className="md:hidden" /> usando su número de la Pokédex Nacional.</p>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div className="bg-[#616161] lg:w-full lg:h-[50px]"></div>
+
+
+
+                            {/* <div className="bg-[#313131] md:h-[200px] md:flex lg:flex-col md:items-center xl:w-[84vw]">
+
+
+                                <div className="lg:flex mb-[20px] md:mb-[0px] ml-[30px] md:ml-[100px] xl:ml-[200px]">
                                     <p className="text-[#f1f1f1] text-[2em]">Nombre o número</p>
 
                                     <div className="flex">
                                         <input
-                                            className="rounded-md w-[250px] lg:w-[370px] h-[40px]"
+                                            className="rounded-md w-[250px] lg:w-[311px] h-[40px]"
                                             type="text"
                                             value={search}
                                             onChange={Searcher}
@@ -116,13 +156,19 @@ function Pokedex() {
 
 
                                     </div>
-                                    <p className="text-[12px] md:text-[16px] text-white font-semibold">¡Usa la búsqueda avanzada para encontrar <br /> Pokémon por su <br className="hidden md:block" /> tipo, debilidad,habilidad y demas datos!</p>
+
+                                    <div className="ml-[30px] md:ml-[50px] w-[250px] h-[90px] md:w-[200px] lg:w-[430px] lg:mb-[54px] rounded-md bg-[#4dad5b] flex items-center">
+                                        <p className="p-3 md:p-5 text-[.8em] text-white lg:text-[20px] font-semibold ">Busca un Pokémon por su nombre o <br /> usando su número de la Pokédex Nacional.</p>
+                                    </div>
+
+
+
                                 </div>
 
-                                <div className="ml-[30px] md:ml-[50px] w-[250px] h-[90px] md:w-[200px] lg:w-[400px] rounded-lg bg-[#4dad5b] flex items-center">
-                                    <p className="p-3 md:p-5 text-[12px] text-white lg:text-[17px] font-semibold ">Busca un Pokémon por su nombre o <br /> usando su número de la Pokédex Nacional.</p>
-                                </div>
-                            </div>
+                                <p className="lg:w-[450px] text-[12px] md:text-[16px] text-white font-semibold">¡Usa la búsqueda avanzada para encontrar <br /> Pokémon por su <br className="hidden md:block" /> tipo, debilidad,habilidad y demas datos!</p>
+
+
+                            </div> */}
 
 
 
@@ -145,7 +191,7 @@ function Pokedex() {
                                         <img className="h-[40px] pr-2" src={Pokeball} alt="" />
 
                                         <select className=" bg-[#313131] h-[50px] text-white md:w-[260px]">
-                                            <option selected value="Número Inferior">Número Inferior</option>
+                                            <option defaultValue="Número Inferior">Número Inferior</option>
                                             <option value="Número Superior">Número Superior</option>
                                             <option value="A-Z">A-Z</option>
 
@@ -168,17 +214,16 @@ function Pokedex() {
 
                                                 // PARA MATCHEAR LA IMG CON EL NOMBRE DEL INPUT LE SUMO UN +1 AL URL DE LAS IMAGENES PARA QUE MIENTRAS TRAIGA LOS ID TAMBIEN TRAIGA LA IMAGEN DEL RESPECTIVO NUMERO
 
-                                                <tr className="h-[300px] w-[250px] m-5">
-                                                    <div className="flex flex-col">
+                                                <tr key={pokemon.id} className="flex flex-col h-[300px] w-[250px] m-5">
 
-                                                        <td className="bg-slate-100  border-solid border-2 border-slate-100">
-                                                            <img className="h-[250px] " src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`} alt="" />
-                                                        </td>
+                                                    <td className="bg-slate-100  border-solid border-2 border-slate-100">
+                                                        <img className="h-[250px] " src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`} alt="" />
+                                                    </td>
 
-                                                        <td className="">
-                                                            <p className="text-[1.6em] font-semibold">{pokemon.name}</p>
-                                                        </td>
-                                                    </div>
+                                                    <td className="">
+                                                        <p className="text-[1.6em] font-semibold">{pokemon.name}</p>
+                                                    </td>
+
                                                 </tr>
 
                                             );

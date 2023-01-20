@@ -2,7 +2,7 @@ import React from "react";
 
 // IMPORTACION DE ICONS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
+import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons"
 
 // IMPORTACION DE NAVEGACION Y LOGOUT
 import { Link } from "react-router-dom"
@@ -27,7 +27,7 @@ function ButtonLogin() {
 
             <Link to="/login" className="
 
-            flex justify-center items-center flex-col md:h-[120px] md:w-[59px] bg-green-500 md:rounded-tr-2xl md:border-r-2 md:border-t-2 border-black 
+            flex justify-center items-center flex-col md:h-[120px] md:w-[59px] bg-[#4dad5b] md:rounded-tr-2xl md:border-r-2 md:border-t-2 border-black 
                 hover:bg-green-600 cursor-pointer"
             >
 
@@ -38,8 +38,8 @@ function ButtonLogin() {
             </Link>
 
 
-            <div onClick={handleLogout} className="flex h-[50px] justify-center items-center md:h-[60px] md:w-[59px] bg-gray-600 hover:bg-sky-500 cursor-pointer border-r-2 border-black">
-                <FontAwesomeIcon className="text-[27px] text-white" icon={faMagnifyingGlass} />
+            <div onClick={handleLogout} className="flex h-[50px] justify-center items-center md:h-[60px] md:w-[59px] bg-[#616161] hover:bg-sky-500 cursor-pointer border-r-2 border-black">
+                <FontAwesomeIcon className="text-[27px] text-white" icon={faArrowRightFromBracket} />
             </div>
         </div>
     )
