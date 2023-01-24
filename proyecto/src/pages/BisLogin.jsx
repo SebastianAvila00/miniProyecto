@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
-
+import NavBar from "../components/NavBar";
 
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import { Link } from "react-router-dom"
 import Footer from "../components/Footer";
-import Formulario from "../components/Form";
-import { Formik } from "formik";
 
 
 function BisLoginPage() {
@@ -50,42 +48,12 @@ function BisLoginPage() {
                 <Header />
 
                 <div>
-                    <div className="md:sticky md:top-0 md:z-50 md:flex md:justify-center md:w-full bg-white">
-                        <Link to="/" className="h-[70px]
-                        flex justify-center items-center bg-[#fff] md:w-[125px] md:h-[89px] border-b-4 border-[#919191] text-[#464646] hover:bg-[#919191] hover:text-[#fff] cursor-pointer ">
-                            <p className="text-[15px] font-semibold ">Inicio</p>
-                        </Link>
-
-                        <Link to="/pokedex" className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-red-500 hover:bg-red-500 text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold"> Pokédex</p>
-                        </Link>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-orange-500  hover:bg-orange-500 text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold "> Aplicaciones</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-yellow-500 hover:bg-yellow-500 text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold ">Juegos de Cartas Coleccionables</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-green-500 hover:bg-green-500 text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold "> TV Pokémon</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-[#5dbef3] hover:bg-[#5dbef3] text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold "> Play! Pokémon</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-[#3d56f5] hover:bg-[#3d56f5] text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold "> Noticias</p>
-                        </div>
-                    </div>
+                <NavBar
+                        TextColorInicio={"text-[#8e8d8d]"}
+                        ColorInicio={"bg-[#fff]"}
+                        ColorPokedex={"bg-[#fff]"}
+                        TextColorPokedex={"text-[#8e8d8d]"}
+                    />
 
 
                     <div className=" xl:flex xl:justify-between">
@@ -98,7 +66,7 @@ function BisLoginPage() {
 
 
 
-                                <p className="text-[1.6em] text-gray-400">¡TE DAMOS LA BIENVENIDA AL CLUB DE ENTRENADORES POKÉMON!</p>
+                                <p className="text-center text-[1.3em] text-gray-400">¡TE DAMOS LA BIENVENIDA AL CLUB DE ENTRENADORES POKÉMON!</p>
 
 
                                 <div className="mt-[50px] flex flex-col md:flex-row md:justify-center">
@@ -169,22 +137,22 @@ function BisLoginPage() {
                                     
 
                                     <div className=" md:ml-5">
-                                        <p className="text-[1.6em]  text-[#919191]">¡Únete al Club de Entrenadores <br /> Pokémon!</p>
+                                        <p className="pl-5 pr-5 mt-5 text-[1.3em]  text-[#919191]">¡Únete al Club de Entrenadores <br /> Pokémon!</p>
 
-                                        <div className="lg:w-[450px] lg:h-[250px] rounded-md md:h-[230px] md:w-[350px] bg-[#F2F2F2]">
+                                        <div className="mt-5 lg:w-[450px] lg:h-[250px] rounded-md md:h-[230px] md:w-[350px] bg-[#F2F2F2]">
 
-                                            <p className="lg:pt-3 lg:pl-5">¡Crea una cuenta del Club de Entrenadores Pokémon <br className="hidden lg:block" /> hoy mismo! Con ella podrás encargarte de tu perfil en Pokemon.com/LATAM, jugar al Juego de Cartas Coleccionables Online... ¡<span className="text-[#1b53ba] cursor-pointer hover:text-[#092355]">y mucho más</span>!</p>
+                                            <p className="mb-5 pl-5 pr-5 lg:pt-3 lg:pl-5">¡Crea una cuenta del Club de Entrenadores Pokémon <br className="hidden lg:block" /> hoy mismo! Con ella podrás encargarte de tu perfil en Pokemon.com/LATAM, jugar al Juego de Cartas Coleccionables Online... ¡<span className="text-[#1b53ba] cursor-pointer hover:text-[#092355]">y mucho más</span>!</p>
 
 
-                                            <div className='flex justify-center lg:justify-end lg:pr-5'>
-                                                <Link to="/register1" className='h-[44px] mt-10  rounded-md text-white w-[140px] hover:bg-[#0c6a8f] font-semibold lg:text-[1.2em] bg-[#30a7d7]' type="submit"><p className="text-center pt-[6px]">¡Regístrate!</p></Link>
+                                            <div className=' flex justify-center lg:justify-end lg:pr-5'>
+                                                <Link to="/register1" className='h-[44px] mt-5 mb-5  rounded-md text-white w-[140px] hover:bg-[#0c6a8f] font-semibold lg:text-[1.2em] bg-[#30a7d7]' type="submit"><p className="text-center pt-[6px]">¡Regístrate!</p></Link>
                                             </div>
 
                                         </div>
 
 
 
-                                        <img className="h-[200px]" src="https://assets.pokemon.com/static2/_ui/img/account/pokemon-login.png" alt="" />
+                                        <img className="mt-5 h-[200px]" src="https://assets.pokemon.com/static2/_ui/img/account/pokemon-login.png" alt="" />
                                     </div>
                                 </div>
 

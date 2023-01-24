@@ -9,24 +9,84 @@
 }
 
 
-.slide img {
-    width: 20rem;
-    margin: 0;
-}
-
 .slide {
-    transform: scale(0.7);
+    transform: scale(1);
     transition: transform 300ms;
-    opacity: 0.5;
-}
-
-.activeSlide {
-    transform: scale(0.9);
     opacity: 1;
 }
 
+.activeSlide {
+    transform: scale(01);
+    opacity: 1;
+
+}
+
+.slide img {
+    width: 25rem;
+    height: 250px;
+    margin: 0;
+    opacity: 0.5;
+    z-index: 30;
+    position: relative;
+}
+
+
+.activeSlide img {
+    height: 300px;
+    width: 320px;
+    transition: 500ms;
+    margin: 0;
+    margin-bottom: 10px;
+    position: absolute;
+    z-index: 30;
+    bottom: -285px;
+    opacity: 1;
+}
+
+.Slide .sur {
+    position: absolute;
+    bottom: -400px;
+    height: 137px;
+}
+
+.activeSlide .sur {
+    position: absolute;
+    bottom: -410px;
+    height: 180px;
+}
+
+
+.slide .borrar {
+    display: none;
+}
+
+.activeSlide .borrar {
+    display: block;
+    transition: 200ms;
+}
+
+
+.slide .fondo {
+    background-color: #616161;
+}
+
+.activeSlide .fondo {
+    background-color: #313131;
+}
+
+
+.slide .numero-fondo {
+    color: #525252;
+    font-size: 120px;
+    font-weight: 800;
+}
+
 .activeSlide .numero-fondo {
-    color: #6f6f6f;
+    color: #777777;
+    bottom: -145px;
+    left: 20px;
+    font-size: 120px;
+    font-weight: 800;
 }
 
 .arrow {
@@ -34,7 +94,6 @@
     position: absolute;
     cursor: pointer;
     z-index: 10;
-
 }
 
 .arrow svg {
@@ -62,6 +121,7 @@
 
 
 @media (max-width: 1024px) {
+
 
     .slide {
         transform: scale(0.4);

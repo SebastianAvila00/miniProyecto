@@ -1,84 +1,84 @@
 export const Images = [
     {
-        id: '1',
-        title: 'Bulbasaur',
-        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png',
-        Type: 'Planta y Veneno',
-        pokedex: '1',
-        ability: 'Espesura'
+        id: '160',
+        title: 'Feraligatr ',
+        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/160.png',
+        Type: 'Agua',
+        pokedex: '160',
+        ability: 'Torrente'
 
     },
     {
-        id: '2',
-        title: 'Ivysaur',
-        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png',
-        Type: 'Planta y Veneno',
-        pokedex: '2',
-        ability: 'Espesura'
+        id: '018',
+        title: 'Pidgeot ',
+        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/018.png',
+        Type: 'Normal Volador',
+        pokedex: '018',
+        ability: 'Vista Lince'
     },
     {
-        id: '3',
-        title: 'Venusaur',
-        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png',
-        Type: 'Planta y Veneno',
-        pokedex: '3',
-        ability: 'Espesura'
+        id: '065',
+        title: 'Alakazam  ',
+        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/065.png',
+        Type: 'Psíquico',
+        pokedex: '065',
+        ability: 'Fuerza Mental'
     },
     {
-        id: '4',
-        title: 'Charmander',
-        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png',
+        id: '123',
+        title: 'Scyther  ',
+        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/123.png',
+        Type: 'Bicho Volador',
+        pokedex: '123',
+        ability: 'Enjambre'
+    },
+    {
+        id: '038',
+        title: 'Ninetales ',
+        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/038.png',
         Type: 'Fuego',
-        pokedex: '4',
-        ability: 'Mar llamas'
+        pokedex: '038',
+        ability: 'Absorbe Fuego'
     },
     {
-        id: '5',
-        title: 'Charmeleon',
-        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/005.png',
-        Type: 'Fuego',
-        pokedex: '5',
-        ability: 'Mar llamas'
+        id: '130',
+        title: 'Gyarados ',
+        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/130.png',
+        Type: 'Agua Volador',
+        pokedex: '130',
+        ability: 'Intimidación'
     },
     {
-        id: '6',
-        title: 'Charizard',
-        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png',
-        Type: 'Fuego',
-        pokedex: '6',
-        ability: 'Mar llamas'
+        id: '133',
+        title: 'Eevee ',
+        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/133.png',
+        Type: 'Normal',
+        pokedex: '133',
+        ability: 'Fuga'
     },
     {
-        id: '7',
-        title: 'Squirtle',
-        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png',
-        Type: 'Agua',
-        pokedex: '7',
-        ability: 'Torrente'
+        id: '111',
+        title: 'Rhyhorn ',
+        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/111.png',
+        Type: 'Tierra Roca',
+        pokedex: '111',
+        ability: 'Cabeza Roca'
     },
     {
-        id: '8',
-        title: 'Wartotle',
-        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png',
-        Type: 'Agua',
-        pokedex: '8',
-        ability: 'Torrente'
+        id: '095',
+        title: 'Onix ',
+        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/095.png',
+        Type: 'Roca Tierra',
+        pokedex: '095',
+        ability: 'Cabeza Roca'
     },
     {
-        id: '9',
-        title: 'Blastoise',
-        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/009.png',
-        Type: 'Agua',
-        pokedex: '9',
-        ability: 'Torrente'
-    },
-    {
-        id: '10',
-        title: 'Caterpie',
-        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/010.png',
-        Type: 'Bicho',
-        pokedex: '10',
-        ability: 'Polvo escudo'
+        id: '248',
+        title: 'Tyranitar',
+        image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/248.png',
+        Type: 'Roca Siniestro',
+        pokedex: '248',
+        ability: 'Chorro Arena'
     },
 
 ]

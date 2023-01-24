@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
 
+import NavBar from "../components/NavBar";
+
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
-import { Link } from "react-router-dom"
 import Footer from "../components/Footer";
 
 import Register2 from "../img/register2.png"
 
 
-
-import { Formik } from "formik";
 
 import Input from "../components/Input";
 
@@ -52,42 +51,12 @@ function BisRegisterPage2() {
                 <Header />
 
                 <div>
-                    <div className="md:sticky md:top-0 md:z-50 md:flex md:justify-center md:w-full bg-white">
-                        <Link to="/" className="h-[70px]
-                        flex justify-center items-center bg-[#fff] md:w-[125px] md:h-[89px] border-b-4 border-[#919191] text-[#464646] hover:bg-[#919191] hover:text-[#fff] cursor-pointer ">
-                            <p className="text-[15px] font-semibold ">Inicio</p>
-                        </Link>
-
-                        <Link to="/pokedex" className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-red-500 hover:bg-red-500 text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold"> Pokédex</p>
-                        </Link>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-orange-500  hover:bg-orange-500 text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold "> Aplicaciones</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-yellow-500 hover:bg-yellow-500 text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold ">Juegos de Cartas Coleccionables</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-green-500 hover:bg-green-500 text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold "> TV Pokémon</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-[#5dbef3] hover:bg-[#5dbef3] text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold "> Play! Pokémon</p>
-                        </div>
-
-                        <div className="h-[70px]
-                        flex justify-center items-center  bg-white md:w-[125px] md:h-[89px] border-b-4 border-[#3d56f5] hover:bg-[#3d56f5] text-[#464646] hover:text-[#fff] cursor-pointer">
-                            <p className="text-[15px] font-semibold "> Noticias</p>
-                        </div>
-                    </div>
+                      <NavBar
+                        TextColorInicio={"text-[#8e8d8d]"}
+                        ColorInicio={"bg-[#fff]"}
+                        ColorPokedex={"bg-[#fff]"}
+                        TextColorPokedex={"text-[#8e8d8d]"}
+                    />
 
 
 
@@ -100,7 +69,7 @@ function BisRegisterPage2() {
                             <div className="lg:flex lg:flex-col lg:mb-[200px] lg:items-center">
 
                                 <div>
-                                    <p className="text-[1.6em] text-[#999999]">Crea tu cuenta Club de Entrenadores Pokémon
+                                    <p className="text-center text-[1.6em] text-[#999999]">Crea tu cuenta Club de Entrenadores Pokémon
                                     </p>
                                 </div>
                                 <div>
@@ -117,7 +86,7 @@ function BisRegisterPage2() {
 
                                                 <div className=" w-full h-[1200px] md:h-[1150px] bg-[#F2F2F2] mt-5 md:w-[600px] md:rounded-tl-lg lg:h-[900px] ">
 
-                                                    <p className="text-[20px] text-[#616161]">Todos los campos son obligatorios.</p>
+                                                    <p className="pt-3 pl-3 text-[20px] text-[#616161]">Todos los campos son obligatorios.</p>
 
 
                                                     <div className="flex flex-col items-center md:flex-row md:justify-between mt-5">
@@ -280,7 +249,7 @@ function BisRegisterPage2() {
 
                                                 </div>
 
-                                                <div className="md:w-full md:ml-5 w-[290px] mb-5  m-auto">
+                                                <div className="mt-5 md:w-full md:ml-5 w-[290px] mb-5  m-auto">
                                                     <p>Para obtener más información, consulte nuestro <span className=" cursor-pointer  text-[#0000EE] hover:text-[#282876]">Aviso sobre la privacidad</span> </p>
                                                 </div>
 
@@ -293,7 +262,7 @@ function BisRegisterPage2() {
                                                     <p className="text-center text-[#616161]">Lee las condiciones de uso y haz clic en "Continuar" para aceptarlas.
                                                     </p>
 
-                                                    <div className=" md:w-[550px] rounded-md w-[300px] h-[350px] bg-[#616161] scrollbar scrollbar-thumb-white">
+                                                    <div className=" md:w-[550px] rounded-md w-[300px] h-[350px] bg-[#616161] overflow-y-scroll">
 
                                                         <div className="pl-5  w-[100%]">
                                                             <span className="text-white flex mb-5"> Términos de uso</span>

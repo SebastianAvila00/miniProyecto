@@ -93,12 +93,12 @@ function Pokedex() {
                             <p className="ml-[30px] lg:mb-5 text-[#919191] text-[1.9em] md:ml-[100px] lg:ml-[200px]">Pokédex</p>
 
 
-                            <div className=" lg:h-[194px] lg:flex-row md:h-[300px] md:w-full flex flex-col justify-center items-center bg-[#313131] md:flex lg:justify-center md:items-center xl:w-[84vw]">
+                            <div className=" lg:h-[194px] lg:flex-row md:h-[300px] md:w-full flex flex-col justify-center items-center bg-[#313131] md:flex lg:justify-center md:items-center xl:w-full">
 
                                 <div className="md:w-full lg:w-[400px]">
-                                    <p className="lg:text-left text-center mt-2 text-[#f1f1f1] mb-3 text-[27px]">Nombre o número</p>
+                                    <p className="lg:text-left text-center mt-2 text-[#fff] mb-3 text-[27px]">Nombre o número</p>
 
-                                    <div className="md:items-center md:justify-center flex lg:flex">
+                                    <div className="justify-center md:items-center md:justify-center flex lg:flex">
 
                                         <input
                                             className="rounded-sm w-[250px] md:w-[312px] h-[40px]"
@@ -114,7 +114,7 @@ function Pokedex() {
 
                                     </div>
 
-                                    <p className="lg:text-left m-auto md:text-center md:w-[400px] lg:w-[450px] text-[12px] md:text-[16px] text-white font-semibold">¡Usa la búsqueda avanzada para encontrar  Pokémon por su tipo, debilidad,habilidad y demas datos!</p>
+                                    <p className="text-center lg:text-left m-auto md:text-center md:w-[400px] lg:w-[450px] text-[12px] md:text-[16px] text-white font-semibold">¡Usa la búsqueda avanzada para encontrar  Pokémon por su tipo, debilidad,habilidad y demas datos!</p>
 
                                 </div>
 
@@ -131,45 +131,6 @@ function Pokedex() {
                             </div>
 
                             <div className="bg-[#616161] lg:w-full lg:h-[50px]"></div>
-
-
-
-                            {/* <div className="bg-[#313131] md:h-[200px] md:flex lg:flex-col md:items-center xl:w-[84vw]">
-
-
-                                <div className="lg:flex mb-[20px] md:mb-[0px] ml-[30px] md:ml-[100px] xl:ml-[200px]">
-                                    <p className="text-[#f1f1f1] text-[2em]">Nombre o número</p>
-
-                                    <div className="flex">
-                                        <input
-                                            className="rounded-md w-[250px] lg:w-[311px] h-[40px]"
-                                            type="text"
-                                            value={search}
-                                            onChange={Searcher}
-
-                                        />
-
-                                        <div className=" md:ml-[20px] flex justify-center items-center md:h-[50px] w-[50px]  rounded-md cursor-pointer hover:bg-[#d15922] bg-[#ee6b2f]">
-
-                                            <FontAwesomeIcon className=" text-[20px] text-white" icon={faMagnifyingGlass} />
-                                        </div>
-
-
-                                    </div>
-
-                                    <div className="ml-[30px] md:ml-[50px] w-[250px] h-[90px] md:w-[200px] lg:w-[430px] lg:mb-[54px] rounded-md bg-[#4dad5b] flex items-center">
-                                        <p className="p-3 md:p-5 text-[.8em] text-white lg:text-[20px] font-semibold ">Busca un Pokémon por su nombre o <br /> usando su número de la Pokédex Nacional.</p>
-                                    </div>
-
-
-
-                                </div>
-
-                                <p className="lg:w-[450px] text-[12px] md:text-[16px] text-white font-semibold">¡Usa la búsqueda avanzada para encontrar <br /> Pokémon por su <br className="hidden md:block" /> tipo, debilidad,habilidad y demas datos!</p>
-
-
-                            </div> */}
-
 
 
 

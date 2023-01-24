@@ -36,7 +36,8 @@ function Register() {
                             <div className="lg:flex lg:flex-col lg:mb-[200px] lg:items-center">
 
                                 <div>
-                                    <p className="text-[1.6em] text-[#999999]">Crea tu cuenta Club de Entrenadores Pokémon
+                                    <p className="text-center text-[1.6em] text-[#999999]">
+                                        Crea tu cuenta Club de Entrenadores Pokémon
                                     </p>
                                 </div>
                                 <div>
@@ -47,7 +48,7 @@ function Register() {
 
 
                                     <div className="md:flex">
-                                        <div className="w-full mb-[300px]  h-[250px] bg-[#F2F2F2] mt-5 md:w-[600px] md:rounded-tl-lg lg:h-[318px]">
+                                        <div className="text-center w-full mb-[390px]  h-[250px] bg-[#F2F2F2] mt-5 md:w-[600px] md:rounded-tl-lg lg:h-[318px]">
 
                                             <p className="text-[20px] text-[#616161]">Todos los campos son obligatorios.</p>
 
@@ -78,7 +79,7 @@ function Register() {
                                                 </div>
 
                                                 <div className='flex justify-center lg:justify-end lg:pr-5'>
-                                                    <Link to="/register2" className='h-[44px] mt-10  rounded-md text-white w-[140px] hover:bg-[#329e42] font-semibold  bg-[#4dad5b]' type="submit">
+                                                    <Link to="/register2Bis" className='h-[44px] mt-10  rounded-md text-white w-[140px] hover:bg-[#329e42] font-semibold  bg-[#4dad5b]' type="submit">
                                                         <p className="text-center pt-[9px]">Continuar</p>
 
                                                     </Link>
@@ -88,17 +89,17 @@ function Register() {
 
                                             <div className="bg-[#616161] mt-4 md:w-[600px] h-[315px] ">
 
-                                                <p className="pl-10 pt-10 text-[#4dad5b] font-semibold text-[1.2em]">Con una cuenta del Club de Entrenadores Pokémon puedes:</p>
+                                                <p className="text-center pt-10 text-[#4dad5b] font-semibold text-[1.2em]">Con una cuenta del Club de Entrenadores Pokémon puedes:</p>
 
-                                                <p className="pl-10 mt-4 text-white text-[18px] font-semibold">Iniciar sesión en las apps de Pokémon, suscribirte a los boletines ¡y mucho más!</p>
+                                                <p className="text-center mt-4 text-white text-[18px] font-semibold">Iniciar sesión en las apps de Pokémon, suscribirte a los boletines ¡y mucho más!</p>
 
-                                                <p className="pl-10 mt-4 font-medium text-white">Si ya tienes una cuenta, <Link className="text-[#30a7d7] hover:text-[#187da5] cursor-pointer" to="/login">inicia sesión.</Link></p>
+                                                <p className="text-center mt-4 font-medium text-white">Si ya tienes una cuenta, <Link className="text-[#30a7d7] hover:text-[#187da5] cursor-pointer" to="/loginBis">inicia sesión.</Link></p>
 
                                             </div>
 
                                         </div>
 
-                                        <div className="bg-gradient-to-b from-[#e6bc2f] to-[#ebc855] md:mb-5 ">
+                                        <div className="hidden md:block h-[535px] lg:h-[598px] mt-5 bg-gradient-to-b from-[#e6bc2f] to-[#ebc855] md:mb-5 ">
                                             <img className=" hidden md:block " src="https://assets.pokemon.com/static2/_ui/img/account/pokemon-signup.png" alt="" />
                                         </div>
                                     </div>

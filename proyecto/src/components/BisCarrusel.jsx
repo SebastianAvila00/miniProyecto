@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // IMPORTACION DE CSS
-import '../components/Carrousel.css'
+import '../components/BisCarrusel.css'
 
 // IMPORTACION DE ICONOS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +15,7 @@ import "slick-carousel/slick/slick-theme.css";
 // IMPORTACION DE DATOS DEL JSON
 import { Images } from "../data/PokeImages";
 
-function Carrousel() {
+function BisCarrusel() {
 
     // BOTONES SIGUIENTE Y ANTERIOR DE CARRUSEL
 
@@ -88,9 +88,58 @@ function Carrousel() {
 
                         <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
 
-                            <div className=" md:w-[300px] ">
 
-                                <div className="bloque lg:w-[360px] lg:h-[250px] md:border-2 bg-[#616161] border-black h-[200px] w-full md:w-[300px] md:h-[250px] flex justify-center items-center ">
+                            <div className="  border-r-2 border-l-2 border-black">
+
+                                <div className="fondo" key={pokemon.id}>
+                                    <div className="centro w-full flex justify-center items-center">
+                                        <p className="m-auto numero-fondo absolute z-10 bottom-[220px] text-[100px]">{pokemon.pokedex}</p>
+                                    </div>
+
+                                    <img className="left-10 md:left-0" src={pokemon.image} alt="" />
+
+                                </div>
+
+
+
+                                <div className=" sur  w-full h-[130px] bg-[#232323] md:w-full text-white">
+
+                                    <div className="flex font-semibold items-center md:justify-between justify-around pt-2">
+
+                                        <p className="text-[1.6em] text-[#f1f1f1] pl-4 
+                                     md:text-[1.6em]">{pokemon.title}
+                                        </p>
+
+                                        <p className="borrar  text-[#f4f4f4] text-[1.6em]  pr-4 md:text-[1.6em]">{pokemon.pokedex}
+                                        </p>
+
+                                    </div>
+
+
+                                    <p className="borrar text-[1.6em] pl-4  md:text-[1em]">Tipo
+                                        <span className="pl-4  font-semibold  md:text-[1em] text-[1em]">
+                                            {pokemon.Type}
+                                        </span>
+                                    </p>
+
+
+                                    <p className="borrar text-[1.6em]  md:text-[1em] pl-4 pb-4 ">
+                                        Habilidad
+                                        <span className=" pl-4  md:text-[1em] font-semibold">
+                                            {pokemon.ability}
+                                        </span>
+                                    </p>
+                                </div>
+
+
+
+                            </div>
+
+
+
+                            {/* <div className=" md:w-[300px] ">
+
+                                <div className="bloque  lg:h-[250px] md:border-2 bg-[#616161] border-black h-[200px] w-full md:w-[300px] md:h-[250px] flex justify-center items-center ">
                                     <div key={pokemon.id}>
 
 
@@ -100,7 +149,7 @@ function Carrousel() {
                                     </div>
                                 </div>
 
-                                <div className="bloque lg:w-[360px] lg:h-[167px] w-full h-[130px] md:h-[150px] bg-[#232323] md:w-full text-white">
+                                <div className="bloque  lg:h-[167px] w-full h-[130px] md:h-[150px] bg-[#232323] md:w-full text-white">
 
                                     <div className="flex font-semibold items-center md:justify-between justify-around pt-2">
                                         <p className="text-[1.6em] text-[#f1f1f1] pl-4 
@@ -125,12 +174,12 @@ function Carrousel() {
                                 </div>
 
 
-                            </div>
+                            </div> */}
                         </div>
                     )
                 })}
             </Slider>
-            
+
         </div>
 
 
@@ -138,7 +187,7 @@ function Carrousel() {
     );
 }
 
-export default Carrousel;
+export default BisCarrusel;
 
 
 

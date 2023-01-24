@@ -10,10 +10,10 @@ import Publi from "../img/publi.png"
 
 function Footer() {
     return (
-        <div>
+        <div className="">
 
             <div className="w-full flex flex-col justify-center items-center
-            bg-[#1f1f1f] md:flex md:flex-row md:justify-evenly md:w-[100vw] md:h-[300px]">
+            bg-[#1f1f1f] md:flex md:flex-row md:justify-evenly md:h-[300px]">
                 <div>
                     <p className="mt-5 text-white font-semibold text-[1.2em] mb-2">The Pokémon Company</p>
                     <p className="text-[#616161] hover:text-[#f1f1f1] cursor-pointer">Guía para padres/tutores</p>

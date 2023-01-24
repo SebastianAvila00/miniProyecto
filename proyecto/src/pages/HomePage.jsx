@@ -9,6 +9,7 @@ import Pokeball from "../img/pokeball.png"
 import Carrousel from "../components/Carrousel";
 import ButtonLogin from "../components/ButtonLogin";
 import NavBar from "../components/NavBar";
+import BisCarrusel from "../components/BisCarrusel";
 
 
 function HomePage() {
@@ -130,10 +131,12 @@ function HomePage() {
 
                                 {/* CARRUSEL */}
                                 
-                                <div className="md:h-[420px] h-[330px] bg-[rgba(0,0,0,0.5)] xl:w-[82vw] "
+
+                                <div className="mb-[50px]  md:h-[380px] h-[330px] bg-[rgba(0,0,0,0.7)] xl:w-[82vw] "
                                 >
-                                    <Carrousel />
+                                    <BisCarrusel />
                                 </div>
+
 
 
                             </div>

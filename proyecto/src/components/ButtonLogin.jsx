@@ -25,7 +25,7 @@ function ButtonLogin() {
         // BOTON FLOTANTE DE LOGEO
         <div className="md:fixed h-[100px] md:left-[0px] lg:left-[0px] xl:left-[123px] z-10">
 
-            <Link to="/login" className="
+            <Link to="/loginBis" className="
 
             flex justify-center items-center flex-col md:h-[120px] md:w-[59px] bg-[#4dad5b] md:rounded-tr-2xl md:border-r-2 md:border-t-2 border-black 
                 hover:bg-green-600 cursor-pointer"
@@ -42,7 +42,7 @@ function ButtonLogin() {
                 <FontAwesomeIcon className="text-[27px] text-white" icon={faArrowRightFromBracket} />
             </div>
         </div>
-    )
+    ) 
 
 }
 
