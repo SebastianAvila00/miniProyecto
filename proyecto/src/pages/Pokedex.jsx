@@ -24,7 +24,7 @@ function Pokedex() {
     const [search, setSearch] = useState("");
     const [changePokemon, setChangePokemon] = useState();
 
-
+    //CUANDO SE APRETA VER MAS TRAE 12 POKEMONES MAS
     const [visible, setVisible] = useState(12);
       const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 12);
@@ -33,7 +33,7 @@ function Pokedex() {
 
     //LLAMADO A POKEAPI
     const peticionGet = async () => {
-        await axios.get("https://pokeapi.co/api/v2/pokemon/")
+        await axios.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1000")
             .then(response => {
                 setChangePokemon(response.data.results);
                 console.log(response.data.results);
